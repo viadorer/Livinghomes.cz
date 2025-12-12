@@ -22,6 +22,7 @@
                 <ul>
                     <li><a href="#hero">Domů</a></li>
                     <li><a href="#models">Modely</a></li>
+                    <li><a href="technologie.html">Technologie</a></li>
                     <li><a href="#">Služby</a></li>
                     <li><a href="#">Galerie</a></li>
                     <li><a href="#">O nás</a></li>
@@ -501,6 +502,7 @@
             </div>
             
             <div class="contact-form">
+                <div id="realvisor-form"></div>
                 <form action="#" method="post">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Vaše jméno" required>
@@ -547,6 +549,7 @@
                     <ul>
                         <li><a href="#hero">Domů</a></li>
                         <li><a href="#models">Modely</a></li>
+                        <li><a href="technologie.html">Technologie</a></li>
                         <li><a href="#benefits">Výhody</a></li>
                         <li><a href="#process">Proces</a></li>
                         <li><a href="#testimonials">Reference</a></li>
@@ -596,5 +599,31 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://realvisor-com-widget.vercel.app/widget.iife.js"></script>
+    <script>
+        (function () {
+            function init() {
+                if (!window.RealvisorWidget) return;
+
+                var container = document.getElementById('realvisor-form');
+                if (!container) return;
+
+                RealvisorWidget.createValuoForm(container, {
+                    apiUrl: 'https://api-production-88cf.up.railway.app/api/v1',
+                    formCode: 'test',
+                    primaryColor: '#10b981',
+                    onSuccess: function (data) {
+                        console.log('Success:', data);
+                    }
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+        })();
+    </script>
 </body>
 </html>

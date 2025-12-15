@@ -613,19 +613,14 @@
     shadow: 'none'
   });
 
-  (function() {
-    var container = document.getElementById('hypokalkulacka-form');
-    if (container && window.Realvisor && window.Realvisor.createHypokalkulackaForm) {
-      window.Realvisor.createHypokalkulackaForm(container, {
-        apiUrl: 'https://api-production-88cf.up.railway.app/api/v1',
-        formCode: 'hypokalkulacka-lead',
-        projectId: '50af5529-1235-4e7f-aef4-52c42b315577',
-        primaryColor: '#2563eb',
-        borderRadius: '16px',
-        shadow: 'lg'
-      });
-    }
-  })();
+  RealvisorWidget.createHypokalkulackaForm(document.getElementById('hypokalkulacka-form'), {
+    apiUrl: 'https://api-production-88cf.up.railway.app/api/v1',
+    formCode: 'hypokalkulacka-lead',
+    projectId: '50af5529-1235-4e7f-aef4-52c42b315577',
+    primaryColor: '#2563eb',
+    borderRadius: '16px',
+    shadow: 'lg'
+  });
     </script>
 </body>
 </html>

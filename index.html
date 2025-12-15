@@ -513,7 +513,7 @@
             <h2 class="section-title">Hypoteční kalkulačka</h2>
             <p class="section-subtitle">Spočítejte si výši hypotéky a měsíční splátky pro váš nový domov.</p>
             <div class="contact-form-wrapper">
-                <div id="realvisor-hypoteka-form" style="width: 100%;"></div>
+                <div id="hypokalkulacka-form"></div>
             </div>
         </div>
     </section>
@@ -613,15 +613,19 @@
     shadow: 'none'
   });
 
-  RealvisorWidget.createHypotekaForm(document.getElementById('realvisor-hypoteka-form'), {
-    apiUrl: 'https://api-production-88cf.up.railway.app/api/v1',
-    formCode: 'hypotecni-kalkulacka',
-    projectId: 'f520885c-4e95-4cd4-9bec-b9244f62477a',
-    primaryColor: '#000000',
-    borderRadius: '0px',
-    maxWidth: '100%',
-    shadow: 'none'
-  });
+  (function() {
+    var container = document.getElementById('hypokalkulacka-form');
+    if (container && window.Realvisor && window.Realvisor.createHypokalkulackaForm) {
+      window.Realvisor.createHypokalkulackaForm(container, {
+        apiUrl: 'https://api-production-88cf.up.railway.app/api/v1',
+        formCode: 'hypokalkulacka-lead',
+        projectId: '50af5529-1235-4e7f-aef4-52c42b315577',
+        primaryColor: '#2563eb',
+        borderRadius: '16px',
+        shadow: 'lg'
+      });
+    }
+  })();
     </script>
 </body>
 </html>

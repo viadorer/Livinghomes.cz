@@ -751,6 +751,36 @@ img {
     background-color: #000;
 }
 
+/* ===== SEKCE KONTAKTNÍHO FORMULÁŘE ===== */
+.contact-form-section {
+    padding: 100px 30px;
+    background-color: #f8f8f8;
+}
+
+.contact-form-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-form-section .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.contact-form-section .section-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.contact-form-wrapper {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 5px;
+}
+
 /* ===== PATIČKA ===== */
 .footer {
     background-color: #111;

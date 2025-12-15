@@ -507,6 +507,17 @@
         </div>
     </section>
 
+    <!-- Kontaktní formulář -->
+    <section id="contact-form" class="contact-form-section">
+        <div class="container">
+            <h2 class="section-title">Napište nám</h2>
+            <p class="section-subtitle">Máte dotaz nebo zájem o naše služby? Neváhejte nás kontaktovat.</p>
+            <div class="contact-form-wrapper">
+                <div id="realvisor-contact-form" style="width: 100%;"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Patička -->
     <footer class="footer">
         <div class="footer-container">
@@ -576,6 +587,15 @@
         RealvisorWidget.createValuoForm(document.getElementById('realvisor-form'), {
     apiUrl: 'https://api-production-88cf.up.railway.app/api/v1',
     formCode: 'valuo-main',
+    primaryColor: '#000000',
+    borderRadius: '0px',
+    maxWidth: '100%',
+    shadow: 'none'
+  });
+
+  RealvisorWidget.createContactForm(document.getElementById('realvisor-contact-form'), {
+    apiUrl: 'https://api-production-88cf.up.railway.app/api/v1',
+    formCode: 'kontakt',
     primaryColor: '#000000',
     borderRadius: '0px',
     maxWidth: '100%',

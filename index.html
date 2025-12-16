@@ -513,7 +513,7 @@
             <h2 class="section-title">Prověření bonity</h2>
             <p class="section-subtitle">Zjistěte si předběžně, zda splňujete podmínky pro získání hypotéky.</p>
             <div class="contact-form-wrapper">
-                <div id="prescoring-form"></div>
+                <div id="prescoring"></div>
             </div>
         </div>
     </section>
@@ -628,16 +628,20 @@
     apiUrl: 'https://api-production-88cf.up.railway.app/api/v1',
     formCode: 'hypokalkulacka-lead',
     projectId: '50af5529-1235-4e7f-aef4-52c42b315577',
-    primaryColor: '#2563eb',
-    borderRadius: '16px',
-    shadow: 'lg'
+    primaryColor: '#000000',
+    borderRadius: '0px',
+    maxWidth: '100%',
+    shadow: 'none'
   });
 
   RealVisor.createPrescoringForm(document.getElementById('prescoring-form'), {
     apiUrl: 'https://api-production-88cf.up.railway.app/api/v1',
     formCode: 'prescoring',
     projectId: 'f816878e-b2f7-4142-bba7-f58542aa7268',
-    primaryColor: '#2563eb'
+    primaryColor: '#000000',
+    borderRadius: '0px',
+    maxWidth: '100%',
+    shadow: 'none'
   });
     </script>
 </body>

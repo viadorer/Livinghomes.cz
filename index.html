@@ -507,6 +507,17 @@
         </div>
     </section>
 
+    <!-- Prescoring -->
+    <section id="prescoring" class="contact-form-section">
+        <div class="container">
+            <h2 class="section-title">Prověření bonity</h2>
+            <p class="section-subtitle">Zjistěte si předběžně, zda splňujete podmínky pro získání hypotéky.</p>
+            <div class="contact-form-wrapper">
+                <div id="prescoring-form"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Hypoteční kalkulačka -->
     <section id="hypoteka" class="contact-form-section">
         <div class="container">
@@ -620,6 +631,16 @@
     primaryColor: '#2563eb',
     borderRadius: '16px',
     shadow: 'lg'
+  });
+
+  RealvisorWidget.createPrescoringForm(document.getElementById('prescoring-form'), {
+    apiUrl: 'https://api-production-88cf.up.railway.app/api/v1',
+    formCode: 'prescoring',
+    projectId: '09814913-b7f6-4d36-a4d7-13347872dc98',
+    primaryColor: '#000000',
+    borderRadius: '0px',
+    maxWidth: '100%',
+    shadow: 'none'
   });
     </script>
 </body>
